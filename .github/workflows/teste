@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIDALERT - Sua Empresa Parceira em Licitações</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">BIDALERT</div>
+        <nav>
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Bem-vindo à BIDALERT</h1>
+            <p>Seu parceiro completo em licitações, do edital ao contrato!</p>
+            <button onclick="scrollToSection('servicos')">Descubra Nossos Serviços</button>
+        </div>
+    </section>
+
+    <!-- Seção de Destaques -->
+    <section id="servicos" class="destaques">
+        <h2>Serviços da BIDALERT</h2>
+        <div class="servico">
+            <h3>Auxílio no Termo de Referência</h3>
+            <p>Interpretação e análise detalhada para garantir compreensão completa.</p>
+        </div>
+        <div class="servico">
+            <h3>Cuidados com o Edital</h3>
+            <p>Revisão minuciosa de editais para prevenir erros e garantir conformidade.</p>
+        </div>
+        <div class="servico">
+            <h3>Boletins Informativos</h3>
+            <p>Notificações personalizadas para não perder oportunidades.</p>
+        </div>
+        <div class="servico">
+            <h3>Encontrar Licitações</h3>
+            <p>Pesquisas otimizadas para identificar licitações relevantes.</p>
+        </div>
+        <div class="servico">
+            <h3>Acompanhamento de Licitações</h3>
+            <p>Suporte contínuo durante todo o processo licitatório.</p>
+        </div>
+        <!-- Adicione mais serviços conforme necessário -->
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="depoimentos" class="depoimentos">
+        <h2>Depoimentos de Clientes</h2>
+        <div class="depoimento">
+            <p>"A BIDALERT tornou o processo de licitação muito mais simples e eficiente para nossa empresa."</p>
+            <span>- Cliente Satisfeito</span>
+        </div>
+        <div class="depoimento">
+            <p>"Desde que contratamos a BIDALERT, nossa taxa de sucesso em licitações aumentou significativamente."</p>
+            <span>- Cliente Satisfeito</span>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="contato">
+            <h3>Entre em Contato</h3>
+            <p>Email: contato@bidalert.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+        </div>
+        <div class="social">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <form id="newsletter-form">
+            <h3>Receba Nosso Boletim Informativo</h3>
+            <input type="email" placeholder="Seu e-mail" required>
+            <button type="submit">Inscrever-se</button>
+        </form>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.destaques {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.destaques h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.servico {
+    display: inline-block;
+    width: 30%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.depoimentos {
+    background-color: #f8f8f8;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.depoimentos h2 {
+    margin-bottom: 1rem;
+}
+
+.depoimento {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .social a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+#newsletter-form {
+    margin-top: 1rem;
+}
+
+#newsletter-form input {
+    padding: 0.5rem;
+    width: 60%;
+}
+
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+
+document.getElementById('newsletter-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    alert('Obrigado por se inscrever na BIDALERT!');
+});
